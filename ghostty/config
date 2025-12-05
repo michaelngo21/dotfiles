@@ -1,0 +1,13 @@
+command = /bin/zsh -l -c "zellij"
+mouse-hide-while-typing = true
+copy-on-select = false
+bold-is-bright = true
+theme = Ayu Mirage
+macos-option-as-alt = true
+keybind = alt+left=unbind
+keybind = alt+right=unbind
+keybind = shift+enter=text:\n
+
+# Jump to very beginning/end of multi-line command
+# keybind = super+up=text:\x1b[1;5H    # Ctrl+Home equivalent
+# keybind = super+down=text:\x1b[1;5F   # Ctrl+End equivalent

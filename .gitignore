@@ -1,0 +1,22 @@
+# Neovim
+nvim/lazy-lock.json
+nvim/.luarc.json
+nvim/.neoconf.json
+
+# macOS
+.DS_Store
+*/.DS_Store
+**/.DS_Store
+
+# Backup files
+*.bak
+*.swp
+*.swo
+*~
+
+# Log files
+*.log
+
+# Temporary files
+.tmp/
+tmp/
