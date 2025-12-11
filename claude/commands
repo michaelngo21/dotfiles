@@ -1,0 +1,15 @@
+---
+description: Create branch if on main, stage changes intelligently, commit with Conventional Commit message, and create PR
+---
+
+Execute a complete git workflow:
+
+1. **Check current branch** - If on `main`/`master`, create a feature branch with a professional name based on changes (e.g., `feature/fix-horizontal-scroll`, `fix/update-contract-error`)
+
+2. **Intelligent staging** - Stage files but skip lock files, build artifacts, logs, temp files, and anything that looks like it should be in .gitignore. If unsure about a file, ask the user.
+
+3. **Conventional Commit** - Analyze changes and create a commit with format `type(scope): description`. Types: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`. Include the Claude Code attribution footer.
+
+4. **Push and PR** - Push with `-u`, then use `gh pr create` with a summary in the body.
+
+Execute this workflow now.

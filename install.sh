@@ -34,7 +34,7 @@ fi
 # Function to backup and symlink a config
 backup_and_link() {
     local config_name=$1
-    local source_path="$DOTFILES_DIR/$config_name"
+    local source_path="$DOTFILES_DIR/.config/$config_name"
     local target_path="$CONFIG_DIR/$config_name"
     local backup_path="$CONFIG_DIR/${config_name}.bak"
 

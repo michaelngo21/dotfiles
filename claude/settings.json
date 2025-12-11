@@ -1,0 +1,33 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "terminal-notifier -message \"shalom it's your boy\" -sound Frog.aiff"
+          }
+        ]
+      ]
+    ],
+    "PermissionRequest": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "terminal-notifier -message \"ya boy needs help\" -sound Basso.aiff"
+          }
+        ]
+      }
+    ]
+  },
+  "alwaysThinkingEnabled": false,
+  "allow": [
+    ...
+  ],
+  "ask": [
+    ...
+  ]
+}

@@ -33,3 +33,6 @@ Requires: AstroNvim (which itself requires a few other pre-req packages), Ghostt
 ## Usage
 
 Edit files in `~/.config` as usual. Changes auto-sync to repo.
+
+## NOTE
+The claude directory is not complete (the ask and allow commands are workstation specific imo) so the settings.json file is incomplete. The folders are also not symlinked for that reason.

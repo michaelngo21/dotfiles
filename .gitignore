@@ -20,3 +20,6 @@ nvim/.neoconf.json
 # Temporary files
 .tmp/
 tmp/
+
+# Project's .claude folder
+.claude
