@@ -96,6 +96,39 @@ return {
 
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
+        --
+        -- Add the Diffview Toggle mapping
+        ["<Leader>gv"] = {
+          function()
+            if next(require("diffview.lib").views) == nil then
+              vim.cmd "DiffviewOpen"
+            else
+              vim.cmd "DiffviewClose"
+            end
+          end,
+          desc = "Toggle Diffview",
+        },
+
+        -- Focus Toggle (Jump between Sidebar and Code)
+        ["<Leader>ge"] = {
+          function()
+            local view = require("diffview.lib").get_current_view()
+            if not view then return end -- Do nothing if Diffview isn't open
+
+            -- If we are currently in the File Panel, jump to the Diff (Files)
+            if vim.bo.filetype == "DiffviewFiles" then
+              vim.cmd "wincmd p" -- 'p' goes to the 'previous' window (the diff)
+            else
+              -- Otherwise, focus the File Panel
+              vim.cmd "DiffviewFocusFiles"
+            end
+          end,
+          desc = "Toggle Focus (Sidebar/Code)",
+        },
+
+        -- Optional: Add File History (logs)
+        ["<Leader>gh"] = { "<cmd>DiffviewFileHistory<cr>", desc = "Repo History" },
+        ["<Leader>gf"] = { "<cmd>DiffviewFileHistory %<cr>", desc = "File History" },
       },
     },
   },
